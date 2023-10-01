@@ -21,12 +21,12 @@ public class PoodleScheduler {
 		
 		taskList = new ArrayList<NoodleTask>();
 		int running_time = 0;
-		int break_hr = 1; // break every n hours
+		int break_hr = 2; // break every n hours
 		// add breaks
 		for(int i = 0; i < tasks.size(); i++) {
 			running_time += tasks.get(i).getTime();
 			taskList.add(tasks.get(i));
-			if(i == 0) {
+			if(i == 1) {
 				NoodleTask temp_break = new NoodleTask(
 						"BREAK", 0, 15);
 				taskList.add(temp_break);
